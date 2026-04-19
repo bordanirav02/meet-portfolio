@@ -129,3 +129,24 @@ function typeEffect() {
 
 // Initialize typing effect
 setTimeout(typeEffect, 1000);
+
+// --- Accordion Toggle (Internship Training Weeks) ---
+document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', function () {
+        const item = this.closest('.accordion-item');
+        const isActive = item.classList.contains('active');
+        
+        // Close all siblings first (single-open behavior)
+        const section = item.closest('.accordion-section');
+        section.querySelectorAll('.accordion-item').forEach(sibling => {
+            sibling.classList.remove('active');
+            sibling.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle current if it wasn't already open
+        if (!isActive) {
+            item.classList.add('active');
+            this.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
