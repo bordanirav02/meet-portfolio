@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Meet Ajudiya</title>
+    <meta name="description" content="Thank you for reaching out to Meet Ajudiya">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #00E1FF;
+            --primary-glow: rgba(0, 225, 255, 0.4);
+            --bg-dark: #070B14;
+            --text-main: #F4F4F5;
+            --text-muted: #94A3B8;
+            --glass-bg: rgba(15, 23, 42, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated background dots */
+        .bg-dots {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-dots span {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatDot 6s infinite;
+        }
+
+        @keyframes floatDot {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) scale(0);
+            }
+            20% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20vh) scale(1);
+            }
+        }
+
+        .thank-you-container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 600px;
+            padding: 4rem 3rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: cardIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+        }
+
+        @keyframes cardIn {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .check-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(0, 225, 255, 0.1);
+            border: 3px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: pulseCheck 2s infinite alternate;
+        }
+
+        @keyframes pulseCheck {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 225, 255, 0.4);
+            }
+            100% {
+                box-shadow: 0 0 30px 10px rgba(0, 225, 255, 0.15);
+            }
+        }
+
+        .check-circle i {
+            font-size: 3rem;
+            color: var(--primary);
+            animation: checkPop 0.6s 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        @keyframes checkPop {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .thank-you-container h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, #A1A1AA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .thank-you-container p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            margin: 2rem auto;
+            border-radius: 2px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: var(--primary);
+            color: #070B14;
+            box-shadow: 0 0 20px var(--primary-glow);
+            transform: translateY(-2px);
+        }
+
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-row a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-row a:hover {
+            background: var(--primary);
+            color: #070B14;
+            transform: translateY(-3px);
+        }
+
+        /* Countdown */
+        .countdown {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 1.5rem;
+        }
+
+        .countdown span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 640px) {
+            .thank-you-container {
+                margin: 1.5rem;
+                padding: 3rem 2rem;
+            }
+            .thank-you-container h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated floating dots background -->
+    <div class="bg-dots" id="bgDots"></div>
+
+    <div class="thank-you-container">
+        <div class="check-circle">
+            <i class="fas fa-check"></i>
+        </div>
+
+        <h1>Thank You!</h1>
+
+        <p>Your message has been <span class="highlight">successfully sent</span>.</p>
+        <p>I appreciate you reaching out and will get back to you as soon as possible.</p>
+
+        <div class="divider"></div>
+
+        <p style="font-size: 0.95rem;">In the meantime, feel free to connect with me:</p>
+
+        <div class="social-row">
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:majudiya123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <div class="countdown">Redirecting in <span id="timer">10</span> seconds...</div>
+    </div>
+
+    <script>
+        // Generate floating background dots
+        const bgDots = document.getElementById('bgDots');
+        for (let i = 0; i < 40; i++) {
+            const dot = document.createElement('span');
+            dot.style.left = Math.random() * 100 + '%';
+            dot.style.animationDelay = Math.random() * 6 + 's';
+            dot.style.animationDuration = (4 + Math.random() * 4) + 's';
+            dot.style.width = dot.style.height = (2 + Math.random() * 4) + 'px';
+            bgDots.appendChild(dot);
+        }
+
+        // Auto-redirect countdown
+        let seconds = 10;
+        const timerEl = document.getElementById('timer');
+        const countdown = setInterval(() => {
+            seconds--;
+            timerEl.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
