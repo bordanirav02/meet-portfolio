@@ -23,8 +23,10 @@ requestAnimationFrame(raf);
 // Prevent Lenis smooth scroll conflicts with anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const target = this.getAttribute('href');
+        if (!target || target === '#') return;
         e.preventDefault();
-        lenis.scrollTo(this.getAttribute('href'));
+        lenis.scrollTo(target, { offset: -105 });
     });
 });
 
@@ -54,8 +56,8 @@ VANTA.NET({
 
 // --- Navbar Scroll Effect ---
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+lenis.on('scroll', ({ scroll }) => {
+    if (scroll > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
@@ -64,13 +66,14 @@ window.addEventListener('scroll', () => {
 
 // --- Mobile Menu Toggle ---
 const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const navLinks = document.getElementById('nav-links');
 const navItems = document.querySelectorAll('.nav-links a');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
     const icon = hamburger.querySelector('i');
-    if(navLinks.classList.contains('active')) {
+    const isOpen = navLinks.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (isOpen) {
         icon.classList.remove('fa-bars');
         icon.classList.add('fa-times');
     } else {

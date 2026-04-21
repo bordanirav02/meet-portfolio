@@ -19,12 +19,33 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 110px;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+section {
+    scroll-margin-top: 110px;
+}
+
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
 }
 
 h1,
@@ -159,6 +180,14 @@ nav.scrolled {
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--text-main);
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.hamburger:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
 }
 
 /* Button Styles */
@@ -208,6 +237,7 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding-top: 6.5rem;
 }
 
 #vanta-bg {
