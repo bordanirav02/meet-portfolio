@@ -285,6 +285,7 @@ nav.scrolled {
     color: #fff;
     background: linear-gradient(135deg, #FFFFFF 0%, #A1A1AA 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -459,102 +460,79 @@ section {
     font-size: 0.95rem;
 }
 
-/* Experience Timeline */
-.timeline {
-    position: relative;
-    max-width: 1000px;
+/* Experience Card */
+.experience-card {
+    max-width: 800px;
     margin: 0 auto;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: var(--glass-border);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-}
-
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-.timeline-item.left {
-    left: 0;
-}
-
-.timeline-item.right {
-    left: 50%;
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    right: -10px;
-    background-color: var(--bg-card);
-    border: 3px solid var(--primary);
-    top: 20px;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: 0 0 15px var(--primary-glow);
-}
-
-.timeline-item.right::after {
-    left: -10px;
-}
-
-.timeline-content {
     padding: 2.5rem;
-    position: relative;
 }
 
-.timeline-date {
-    display: inline-block;
-    padding: 0.3rem 0.8rem;
-    background: rgba(0, 225, 255, 0.1);
+.exp-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.exp-icon {
+    font-size: 1.8rem;
     color: var(--primary);
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
+    background: rgba(0, 225, 255, 0.1);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(0, 225, 255, 0.1);
 }
 
-.timeline-title {
+.exp-title {
     color: var(--text-main);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 0.3rem;
 }
 
-.timeline-company {
-    color: var(--text-muted);
+.exp-company {
+    color: var(--primary);
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.timeline-content ul {
+.exp-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.exp-date i {
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+
+.exp-list {
     list-style: none;
     padding-left: 0;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 1.8rem;
 }
 
-.timeline-content ul li {
+.exp-list li {
     position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.8rem;
+    padding-left: 1.8rem;
+    margin-bottom: 1rem;
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 0.98rem;
+    line-height: 1.7;
 }
 
-.timeline-content ul li::before {
+.exp-list li::before {
     content: '\f105';
-    /* FontAwesome right angle */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     position: absolute;
@@ -566,15 +544,15 @@ section {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
+    align-items: start;
 }
 
 .project-card {
-    padding: 2.5rem;
+    padding: 2rem;
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .project-card:hover {
@@ -649,7 +627,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .badge {
@@ -807,8 +785,8 @@ section {
 
 /* --- Live Project Block with Electric Blue Glow --- */
 .live-project-block {
-    margin: 1.5rem 0;
-    padding: 1.5rem;
+    margin: 1rem 0;
+    padding: 1.2rem;
     border-radius: 12px;
     background: rgba(0, 225, 255, 0.04);
     border: 1px solid rgba(0, 225, 255, 0.35);
@@ -888,7 +866,7 @@ section {
 
 /* --- Learning Outcomes --- */
 .learning-outcomes {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .learning-outcomes h4 {
@@ -935,8 +913,8 @@ section {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    margin-top: 1.5rem;
-    padding: 1rem 1.2rem;
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.08), rgba(56, 142, 60, 0.04));
     border: 1px solid rgba(76, 175, 80, 0.25);
     border-radius: 10px;
@@ -1426,25 +1404,6 @@ footer {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
-    }
-
-    .timeline::after {
-        left: 31px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline-item.right {
-        left: 0;
-    }
-
-    .timeline-item::after,
-    .timeline-item.right::after {
-        left: 21px;
     }
 
     .contact-info {

@@ -32,10 +32,10 @@
     <nav id="navbar" data-aos="fade-down" data-aos-duration="1000">
         <div class="container nav-container">
             <a href="#" class="logo">M<span>A</span></a>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
                 <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -47,6 +47,7 @@
     </nav>
 
     <!-- Hero Section -->
+    <main>
     <section id="hero">
         <!-- Vanta Background -->
         <div id="vanta-bg"></div>
@@ -144,159 +145,23 @@
             <header class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Experience</h2>
             </header>
-            <div class="timeline">
-                <div class="timeline-item left" data-aos="fade-right" data-aos-delay="100">
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-date">Jun 2025 – Aug 2025 | New York, NY</div>
-                        <h3 class="timeline-title">Business Analyst Intern</h3>
-                        <div class="timeline-company">Shivam Jewels</div>
-                        <ul>
-                            <li>Analyzed 10K+ records of diamond pricing, inventory, and sales data</li>
-                            <li>Improved reporting accuracy by <span class="metric">25%</span> via data profiling and
-                                validation</li>
-                            <li>Built Power BI dashboards tracking pricing trends, reducing manual reporting by <span
-                                    class="metric">30%</span></li>
-                            <li>Collaborated with stakeholders to translate business needs into data solutions</li>
-                        </ul>
+            <div class="experience-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="exp-header">
+                    <div class="exp-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="exp-meta">
+                        <h3 class="exp-title">Data Analyst Intern</h3>
+                        <div class="exp-company">Samp Technologies</div>
+                        <div class="exp-date"><i class="fas fa-calendar-alt"></i> Jan 2024 – Jul 2024 &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Surat, India</div>
                     </div>
                 </div>
-                <div class="timeline-item right" data-aos="fade-left" data-aos-delay="300">
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-date">Jan 2024 – Jul 2024 | Surat, India</div>
-                        <h3 class="timeline-title">Data Analyst Intern</h3>
-                        <div class="timeline-company">Samp Technologies</div>
-                        <ul>
-                            <li>Worked on 50K+ record large-scale datasets for analysis and transformation</li>
-                            <li>Improved reporting accuracy by <span class="metric">15%</span> via SQL-based validation
-                            </li>
-                            <li>Optimized SQL queries for performance in reporting workflows</li>
-                            <li>Developed data mappings between source datasets and reporting outputs</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- DigitalSweep Internship — Enhanced Timeline Card -->
-                <div class="timeline-item left" data-aos="fade-right" data-aos-delay="500">
-                    <div class="timeline-content glass-card internship-enhanced">
-                        <div class="timeline-date">Dec 2021 – Apr 2022 | Surat, India</div>
-                        <h3 class="timeline-title">SAP Analytics Cloud Intern</h3>
-                        <div class="timeline-company">DigitalSweep India Pvt. Ltd.</div>
-
-                        <!-- Badges Row -->
-                        <div class="internship-badges">
-                            <span class="badge badge-gold"><i class="fas fa-code"></i> Custom Widget Developer</span>
-                            <span class="badge badge-verified"><i class="fas fa-certificate"></i> Verified
-                                Certificate</span>
-                        </div>
-
-                        <!-- Company Info -->
-                        <div class="internship-about">
-                            <p class="internship-about-text">
-                                <strong>Final Year Internship</strong> — B.Tech IT, P.P. Savani University. DigitalSweep
-                                is an IT & business transformation consultancy (HQ: France, founded by Laroussi
-                                Bouguila) specializing in SAP consulting, data analytics, data governance & digital
-                                innovation. India office managed by Girish Lakhani (MD).
-                            </p>
-                        </div>
-
-                        <!-- Training Weeks Accordion -->
-                        <div class="accordion-section">
-                            <h4 class="accordion-section-title"><i class="fas fa-graduation-cap"></i> Training Breakdown
-                            </h4>
-
-                            <div class="accordion-item" id="week1">
-                                <button class="accordion-trigger" aria-expanded="false" aria-controls="week1-content">
-                                    <span><i class="fas fa-calendar-week"></i> Week 1 — SAC Fundamentals</span>
-                                    <i class="fas fa-chevron-down accordion-chevron"></i>
-                                </button>
-                                <div class="accordion-content" id="week1-content">
-                                    <p>SAP Analytics Cloud fundamentals, data integration & exploration, advanced
-                                        charts, augmented analytics (Smart Assist, NLP).</p>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item" id="week2">
-                                <button class="accordion-trigger" aria-expanded="false" aria-controls="week2-content">
-                                    <span><i class="fas fa-calendar-week"></i> Week 2 — Advanced Modeling</span>
-                                    <i class="fas fa-chevron-down accordion-chevron"></i>
-                                </button>
-                                <div class="accordion-content" id="week2-content">
-                                    <p>SAP Digital Boardroom, advanced modeling (Analytical vs Planning, Acquired vs
-                                        Live), Live Connection to SAP HANA/BW/S4HANA, Smart Predictive Scenario,
-                                        time-series segmentation (Classification & Regression).</p>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item" id="week3">
-                                <button class="accordion-trigger" aria-expanded="false" aria-controls="week3-content">
-                                    <span><i class="fas fa-calendar-week"></i> Week 3 — Application Design</span>
-                                    <i class="fas fa-chevron-down accordion-chevron"></i>
-                                </button>
-                                <div class="accordion-content" id="week3-content">
-                                    <p>Analytical Application & Story design, widget exploration — Dropdown, Slider,
-                                        Button, Shape, Image, Input Control, Checkbox, Radio Button, Filter Line, Toggle
-                                        Switch, RSS Feed, R Viz.</p>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item" id="week4">
-                                <button class="accordion-trigger" aria-expanded="false" aria-controls="week4-content">
-                                    <span><i class="fas fa-calendar-week"></i> Week 4 — Planning & VDT</span>
-                                    <i class="fas fa-chevron-down accordion-chevron"></i>
-                                </button>
-                                <div class="accordion-content" id="week4-content">
-                                    <p>Planning Application, Data Actions with advanced formulas, Value Driver Tree
-                                        (VDT), Distribution and Allocation.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Live Project Block with Glowing Border -->
-                        <div class="live-project-block">
-                            <div class="live-project-header">
-                                <i class="fas fa-rocket"></i>
-                                <h4>Live Project — Pharmaceuticals Industry</h4>
-                                <span class="badge badge-agile">Agile</span>
-                            </div>
-                            <ul>
-                                <li>Built a <strong>Proof of Concept (POC)</strong> Sales Forecast dashboard presented
-                                    to Solution Architect and Business Owner</li>
-                                <li>Developed <strong>2 custom widgets</strong> from scratch: Dropdown Hierarchy Widget
-                                    & Trend Chart Widget</li>
-                                <li>Implemented full Sales Forecast Dashboard with <strong>Table View</strong> (Top Nav
-                                    Filter, Setting Panel, Version Comparison) and <strong>Graph View</strong> (AI Trend
-                                    Charts, Country/Brand Filters, AI Ranges toggle)</li>
-                                <li>Iterated through Test Environment → QA Environment after stakeholder feedback cycles
-                                </li>
-                                <li><strong>Dev Tool:</strong> SAP Analytics Cloud (SaaS) | <strong>Report
-                                        Type:</strong> Analytical Application</li>
-                            </ul>
-                        </div>
-
-                        <!-- Key Learning Outcomes -->
-                        <div class="learning-outcomes">
-                            <h4><i class="fas fa-lightbulb"></i> Key Learning Outcomes</h4>
-                            <div class="learning-tags">
-                                <span class="learning-tag">Data Discovery</span>
-                                <span class="learning-tag">Machine Learning</span>
-                                <span class="learning-tag">Financial Planning</span>
-                                <span class="learning-tag">Predictive Analysis</span>
-                                <span class="learning-tag">Data Cleansing</span>
-                                <span class="learning-tag">Visualization</span>
-                                <span class="learning-tag">Custom Widgets</span>
-                                <span class="learning-tag">On-Premises Integration</span>
-                            </div>
-                        </div>
-
-                        <!-- Certificate Footer -->
-                        <div class="certificate-footer">
-                            <i class="fas fa-award"></i>
-                            <span>Certificate issued by <strong>Girish Lakhani</strong>, Managing Director, DigitalSweep
-                                India Pvt. Ltd. — April 15, 2022</span>
-                        </div>
-                    </div>
-                </div>
-
+                <ul class="exp-list">
+                    <li>Worked on 50K+ record large-scale datasets for analysis and transformation</li>
+                    <li>Improved reporting accuracy by <span class="metric">15%</span> via SQL-based validation</li>
+                    <li>Optimized SQL queries for performance in reporting workflows</li>
+                    <li>Developed data mappings between source datasets and reporting outputs</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -383,6 +248,59 @@
                     <div class="project-result">
                         <p><strong>Future Scope:</strong> SAC Custom Widget Framework using JSON + JavaScript files for
                             fully custom UI elements and visualizations beyond standard widget library.</p>
+                    </div>
+                </div>
+
+                <!-- SAP Analytics Cloud Internship Project -->
+                <div class="project-card glass-card internship-enhanced" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <i class="fas fa-briefcase project-icon"></i>
+                        <div>
+                            <h3 class="project-title">SAP Analytics Cloud Internship Project</h3>
+                            <span class="featured-duration">Dec 2021 – Apr 2022 · Surat, India</span>
+                        </div>
+                    </div>
+
+                    <div class="internship-badges">
+                        <span class="badge badge-gold"><i class="fas fa-code"></i> Custom Widget Developer</span>
+                        <span class="badge badge-verified"><i class="fas fa-certificate"></i> Internship Project</span>
+                    </div>
+
+                    <div class="project-body">
+                        <p><strong>Company:</strong> DigitalSweep India Pvt. Ltd. — IT transformation consultancy focused on SAP analytics, data governance, and digital innovation.</p>
+                        <p><strong>Scope:</strong> Delivered a proof-of-concept SAP Analytics Cloud dashboard for the pharmaceuticals industry, with custom widgets, dynamic story layout, and forecasting insights.</p>
+                    </div>
+
+                    <div class="live-project-block">
+                        <div class="live-project-header">
+                            <i class="fas fa-rocket"></i>
+                            <h4>Project Outcome</h4>
+                            <span class="badge badge-agile">Agile</span>
+                        </div>
+                        <ul>
+                            <li>Built a <strong>POC Sales Forecast dashboard</strong> presented to Solution Architect and Business Owner</li>
+                            <li>Developed <strong>2 custom SAC widgets</strong>: Dropdown Hierarchy & Trend Chart</li>
+                            <li>Implemented <strong>Table View</strong> and <strong>Graph View</strong> with AI Trend Charts and filters</li>
+                            <li>Iterated through Test and QA cycles after stakeholder feedback</li>
+                            <li><strong>Tool:</strong> SAP Analytics Cloud | <strong>Report Type:</strong> Analytical Application</li>
+                        </ul>
+                    </div>
+
+                    <div class="learning-outcomes">
+                        <h4><i class="fas fa-lightbulb"></i> Key Learning Outcomes</h4>
+                        <div class="learning-tags">
+                            <span class="learning-tag">Data Discovery</span>
+                            <span class="learning-tag">Predictive Analysis</span>
+                            <span class="learning-tag">Visualization</span>
+                            <span class="learning-tag">Custom Widgets</span>
+                            <span class="learning-tag">SAP Analytics Cloud</span>
+                            <span class="learning-tag">Dashboard Design</span>
+                        </div>
+                    </div>
+
+                    <div class="certificate-footer">
+                        <i class="fas fa-award"></i>
+                        <span>Certificate issued by <strong>Girish Lakhani</strong>, Managing Director, DigitalSweep India Pvt. Ltd.</span>
                     </div>
                 </div>
 
@@ -519,7 +437,7 @@
                 <form class="contact-form glass-card" data-aos="fade-up" data-aos-delay="300" style="padding: 2.5rem;"
                     action="https://formsubmit.co/majudiya123@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://meet-portfolio-ruddy.vercel.app/thanks.html">
+                    <input type="hidden" name="_next" value="thanks.html">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
@@ -534,14 +452,15 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="social-links" data-aos="fade-up">
-                <a href="https://www.linkedin.com/in/meet-ajudiya-493302239/" target="_blank" aria-label="LinkedIn"><i
+                <a href="https://www.linkedin.com/in/meet-ajudiya-493302239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
                         class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/meetajudiya" target="_blank" aria-label="GitHub"><i
+                <a href="https://github.com/meetajudiya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
                         class="fab fa-github"></i></a>
             </div>
             <p class="footer-text" data-aos="fade-up" data-aos-delay="200">Built by Meet Ajudiya &middot; 2025</p>
