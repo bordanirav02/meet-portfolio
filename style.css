@@ -620,6 +620,43 @@ section {
 .internship-enhanced {
     position: relative;
     overflow: visible;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0 2.5rem;
+}
+
+.internship-enhanced .project-header {
+    grid-column: 1 / -1;
+}
+
+.internship-enhanced .internship-badges {
+    grid-column: 1 / -1;
+}
+
+.internship-enhanced .project-body {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.internship-enhanced .live-project-block {
+    grid-column: 2;
+    grid-row: 3 / 6;
+    margin: 0;
+    align-self: start;
+}
+
+.internship-enhanced .learning-outcomes {
+    grid-column: 1;
+    grid-row: 4;
+    margin-bottom: 0;
+}
+
+.internship-enhanced .certificate-footer {
+    grid-column: 1;
+    grid-row: 5;
+    margin-top: 0;
 }
 
 /* Internship Badges Row */
@@ -1409,6 +1446,24 @@ footer {
     .contact-info {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    /* Responsive: collapse internship 2-col layout to single column */
+    .internship-enhanced {
+        grid-template-columns: 1fr;
+    }
+
+    .internship-enhanced .project-body,
+    .internship-enhanced .live-project-block,
+    .internship-enhanced .learning-outcomes,
+    .internship-enhanced .certificate-footer {
+        grid-column: 1;
+        grid-row: auto;
+        margin: 0.5rem 0;
+    }
+
+    .internship-enhanced .live-project-block {
+        margin: 1rem 0;
     }
 
     /* Responsive: Internship + Featured Project */
